@@ -1,0 +1,205 @@
+@import url('https://fonts.googleapis.com/css2?family=Cascadia+Code:wght@400;700&display=swap');
+
+:root {
+  --font-main: 'Cascadia Code', monospace;
+  /* Primary Palette */
+  --color-primary-accent: #2E86AB; /* Deep blue */
+  --color-secondary-accent: #F5A623; /* Warm golden-orange */
+  /* Supporting Colors */
+  --color-bg-light: #F9FAFB; /* Very light gray */
+  --color-text-primary: #1F2937; /* Almost black */
+  --color-neutral-gray: #9CA3AF; /* Muted gray */
+  /* Status Colors */
+  --color-success: #27AE60; /* Fresh green */
+  --color-warning: #F39C12; /* Amber */
+  --color-error: #E74C3C; /* Red */
+  /* Default background/text for light theme */
+  --color-bg: var(--color-bg-light);
+  --color-fg: var(--color-text-primary);
+}
+
+.dark {
+    /* Dark mode with elegant green and deep blues */
+    --background: 163 35% 8%;      /* Deep green-gray background */
+    --foreground: 180 25% 98%;     /* Blue-white text */
+    --card: 163 35% 10%;           /* Slightly lighter card bg */
+    --card-foreground: 180 25% 98%;
+    --popover: 163 35% 10%;
+    --popover-foreground: 180 25% 98%;
+    --primary: 142 70% 45%;        /* Bright green for emphasis */
+    --primary-foreground: 180 25% 98%;
+    --secondary: 163 35% 15%;      /* Subtle green secondary */
+    --secondary-foreground: 180 25% 98%;
+    --muted: 163 35% 15%;
+    --muted-foreground: 180 25% 75%;
+    --accent: 142 65% 40%;         /* Rich green accent */
+    --accent-foreground: 180 25% 98%;
+    --destructive: 0 62% 30%;
+    --destructive-foreground: 0 0% 98%;
+    --border: 163 35% 20%;
+    --input: 163 35% 15%;
+    --ring: 142 70% 45%;
+    /* Dark mode chart colors */
+    --chart-1: 142 70% 45%;        /* Bright green */
+    --chart-2: 180 65% 50%;        /* Bright blue */
+    --chart-3: 142 55% 40%;        /* Muted green */
+    --chart-4: 180 50% 45%;        /* Muted blue */
+    --chart-5: 142 45% 35%;        /* Dark green */
+  }
+
+body {
+  font-family: var(--font-main);
+  background: #F9FAFB;
+  color: var(--color-text-primary);
+  font-feature-settings: "liga" 1;
+}
+
+/* Utility classes for palette usage */
+.bg-primary-accent { background-color: var(--color-primary-accent); }
+.bg-secondary-accent { background-color: var(--color-secondary-accent); }
+.bg-success { background-color: var(--color-success); }
+.bg-warning { background-color: var(--color-warning); }
+.bg-error { background-color: var(--color-error); }
+.bg-neutral-gray { background-color: var(--color-neutral-gray); }
+.bg-bg-light { background-color: var(--color-bg-light); }
+.bg-bg { background-color: var(--color-bg); }
+
+.text-primary-accent { color: var(--color-primary-accent); }
+.text-secondary-accent { color: var(--color-secondary-accent); }
+.text-success { color: var(--color-success); }
+.text-warning { color: var(--color-warning); }
+.text-error { color: var(--color-error); }
+.text-neutral-gray { color: var(--color-neutral-gray); }
+.text-bg-light { color: var(--color-bg-light); }
+.text-text-primary { color: var(--color-text-primary); }
+
+.text-primary, .font-headline, h1, h2, h3, h4, h5, h6 {
+  color: var(--color-fg) !important;
+  font-family: var(--font-main);
+  font-feature-settings: "liga" 1;
+}
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    /* Luxurious green and white theme with blur effects */
+    --background: 0 0% 100%;      /* Pure white background */
+    --foreground: 150 30% 20%;    /* Deep green text */
+    --card: 0 0% 98%;             /* Soft white for cards */
+    --card-foreground: 150 30% 20%;
+    --popover: 0 0% 100%;
+    --popover-foreground: 150 30% 20%;
+    --primary: 142 70% 35%;       /* Rich emerald green */
+    --primary-foreground: 0 0% 100%;
+    --secondary: 150 20% 96%;     /* Very light sage */
+    --secondary-foreground: 150 30% 20%;
+    --muted: 150 10% 92%;
+    --muted-foreground: 150 30% 40%;
+    --accent: 142 76% 45%;        /* Vibrant forest green */
+    --accent-foreground: 0 0% 100%;
+    --destructive: 0 84% 60%;
+    --destructive-foreground: 0 0% 100%;
+    --border: 150 20% 90%;
+    --input: 150 20% 95%;
+    --ring: 142 70% 35%;
+    /* Nature-inspired chart colors */
+    --chart-1: 142 70% 35%;       /* Forest green */
+    --chart-2: 120 65% 45%;       /* Fresh leaf */
+    --chart-3: 150 55% 40%;       /* Sage */
+    --chart-4: 135 60% 50%;       /* Spring green */
+    --chart-5: 160 50% 45%;       /* Mountain green */
+    --radius: 0.5rem;
+
+    /* Blur effect variables */
+    --blur-sm: blur(4px);
+    --blur-md: blur(8px);
+    --blur-lg: blur(16px);
+    --glass-bg: rgba(255, 255, 255, 0.7);
+  }
+
+  .dark {
+    --background: 222 47% 11%;
+    --foreground: 210 40% 98%;
+    --card: 222 47% 11%;
+    --card-foreground: 210 40% 98%;
+    --popover: 222 47% 11%;
+    --popover-foreground: 210 40% 98%;
+    --primary: 217 91% 60%;
+    --primary-foreground: 222 47% 11%;
+    --secondary: 217 32% 17%;
+    --secondary-foreground: 210 40% 98%;
+    --muted: 217 32% 17%;
+    --muted-foreground: 215 20% 65%;
+    --accent: 217 32% 17%;
+    --accent-foreground: 210 40% 98%;
+    --destructive: 0 62% 30%;
+    --destructive-foreground: 210 40% 98%;
+    --border: 217 32% 17%;
+    --input: 217 32% 17%;
+    --ring: 224 76% 48%;
+    --chart-1: 217 91% 60%;
+    --chart-2: 47 95% 57%;
+    --chart-3: 148 60% 49%;
+    --chart-4: 346 84% 61%;
+    --chart-5: 275 80% 56%;
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+  body {
+    @apply bg-background text-foreground font-body;
+  }
+  h1, h2, h3, h4, h5, h6 {
+    @apply font-headline;
+  }
+}
+
+@layer utilities {
+  .perspective {
+    perspective: 1000px;
+  }
+  .preserve-3d {
+    transform-style: preserve-3d;
+  }
+  .rotate-y-180 {
+    transform: rotateY(180deg);
+  }
+  .backface-hidden {
+    backface-visibility: hidden;
+  }
+  
+  /* Animation utilities */
+  .animate-blob {
+    animation: blob 7s infinite;
+  }
+  .animation-delay-2000 {
+    animation-delay: 2s;
+  }
+  .animation-delay-4000 {
+    animation-delay: 4s;
+  }
+
+  @keyframes blob {
+    0% {
+      transform: translate(0px, 0px) scale(1);
+    }
+    33% {
+      transform: translate(30px, -50px) scale(1.1);
+    }
+    66% {
+      transform: translate(-20px, 20px) scale(0.9);
+    }
+    100% {
+      transform: translate(0px, 0px) scale(1);
+    }
+  }
+
+  .bg-grid-slate-200\/20 {
+    background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32' width='32' height='32' fill='none' stroke='rgb(148 163 184 / 0.2)'%3e%3cpath d='M0 .5H31.5V32'/%3e%3c/svg%3e");
+  }
+}
