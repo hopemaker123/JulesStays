@@ -5,7 +5,11 @@ import { Alert, AlertDescription, AlertTitle } from "@/components/ui/alert";
 import { CheckCircle, Shield, User } from "lucide-react";
 import { Separator } from "@/components/ui/separator";
 
-export default function LoginPage({ searchParams }: { searchParams?: { [key: string]: string | string[] | undefined } }) {
+interface PageProps {
+  searchParams?: { [key: string]: string | string[] | undefined };
+}
+
+export default function LoginPage({ searchParams }: PageProps) {
   const bookingSuccess = searchParams?.booking === 'success';
 
   return (

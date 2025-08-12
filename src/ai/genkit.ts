@@ -13,4 +13,6 @@ export const ai = genkit({
   // Default to a fast model for general use cases.
   // Specific flows can override this with more powerful models.
   model: 'googleai/gemini-2.0-flash',
+  // Disable tracing to avoid dependency issues
+  tracing: false
 });
